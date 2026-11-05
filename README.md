@@ -5,13 +5,25 @@ Trang chính sách quyền riêng tư của trò chơi **Backpack Survivor**
 
 **Trang đã xuất bản:** https://anhngocnguyen1034.github.io/backpack-survivor-privacy/
 
-Đây là URL dùng để điền vào mục *Privacy Policy* trên Google Play Console và
-cũng là địa chỉ nút **Chính sách** trong phần Cài đặt của trò chơi mở ra.
+URL này dùng để điền vào mục *Privacy Policy* trên Google Play Console.
 
-## Sửa nội dung
+## Đừng sửa `index.html` bằng tay
 
-Sửa `index.html` rồi đẩy lên nhánh `main`; GitHub Pages tự dựng lại sau vài chục giây.
-Nhớ cập nhật ngày ở hai dòng "Cập nhật lần cuối" / "Last updated".
+Chính sách phải đọc được **ngay trong trò chơi khi không có mạng**, nên chữ gốc nằm trong
+`scripts/meta/policy_text.gd` của kho mã trò chơi và được đóng gói thẳng vào APK.
+Trang web này **sinh ra từ chính file đó**:
 
-Chính sách phải được cập nhật **trước** khi phát hành bản có quảng cáo hoặc có
-bất kỳ tính năng nào gửi dữ liệu ra khỏi máy người chơi.
+```bash
+# trong kho mã trò chơi
+~/venv/bin/python -I tools/gen_policy.py ../backpack-survivor-privacy
+```
+
+Sửa tay `index.html` thì lần sinh sau sẽ ghi đè, và tệ hơn là bản Google đọc sẽ khác bản
+người chơi đọc. Luôn sửa ở `policy_text.gd` rồi chạy lại lệnh trên.
+
+Nhớ cập nhật `UPDATED` / `UPDATED_EN` trong `policy_text.gd` mỗi lần đổi nội dung.
+
+## Khi nào bắt buộc phải cập nhật
+
+Trước khi phát hành bất kỳ bản nào có quảng cáo, có SDK phân tích, hoặc có tính năng gửi
+dữ liệu ra khỏi máy người chơi.
