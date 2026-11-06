@@ -1,9 +1,9 @@
-# Backpack Survivor — Privacy Policy
+# Bag Buddies — Privacy Policy
 
-Trang chính sách quyền riêng tư của trò chơi **Backpack Survivor**
-(`com.animalheroes.backpacksurvivor`), song ngữ Việt — Anh.
+Trang chính sách quyền riêng tư của trò chơi **Bag Buddies**
+(`com.animalheroes.bagbuddies`), song ngữ Việt — Anh.
 
-**Trang đã xuất bản:** https://anhngocnguyen1034.github.io/backpack-survivor-privacy/
+**Trang đã xuất bản:** https://anhngocnguyen1034.github.io/bag-buddies-privacy/
 
 URL này dùng để điền vào mục *Privacy Policy* trên Google Play Console.
 
@@ -15,7 +15,7 @@ Trang web này **sinh ra từ chính file đó**:
 
 ```bash
 # trong kho mã trò chơi
-~/venv/bin/python -I tools/gen_policy.py ../backpack-survivor-privacy
+~/venv/bin/python -I tools/gen_policy.py ../bag-buddies-privacy
 ```
 
 Sửa tay `index.html` thì lần sinh sau sẽ ghi đè, và tệ hơn là bản Google đọc sẽ khác bản
